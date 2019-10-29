@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="tool.js"></script>
+    <title>自动阅读器</title>
+</head>
+<body>
+关于body部分自行copy一些长文字以供自己测试
+         
+         <div style="width:100px; height:100px; border-radius:50%; background-color:#f40; position:fixed; right:50px; bottom:150px;opacity: 0.5;font-size: 30px;text-align: center;line-height: 100px;font-weight: bold;color:coral;">start</div>
+         <div style="width:100px; height:100px; border-radius:50%; background-color:#f40; position:fixed; right:50px; bottom:30px;opacity: 0.5;font-size: 30px;text-align: center;line-height: 100px;font-weight: bold;color:coral;">stop</div>
+         
+        
+        
+    <script>
+    var start  = document.getElementsByTagName('div')[0];
+    var stop = document.getElementsByTagName('div')[1];
+    var timer;
+    var key = true;
+    start.onclick = function(){
+      if(key){
+        timer = setInterval(function(){
+            window.scrollBy(0,2);
+        },100);
+        key = false;
+      } 
+        stop.onclick = function () {
+            clearInterval(timer);
+            key = true;
+        }
+    }
+    </script>
 
+</body>
+</html>
